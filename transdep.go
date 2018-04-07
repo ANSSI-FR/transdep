@@ -147,7 +147,7 @@ func spoolDependencyRequest(wc <-chan *dep_msg.Request, ansChan chan<- *WorkerRe
 						ansChan <- &WorkerResult{
 							req.Name(), g.String(), nil, nil,
 							nil, nil, nil, nil,
-							err,
+							nil,
 						}
 					} else {
 						go performBackgroundAnalysis(req.Name(), relNode, ansChan, analysisDoneChan, reqConf, tree)
